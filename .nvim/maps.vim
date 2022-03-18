@@ -1,4 +1,4 @@
-" He tomado la tecla lider como > space
+" mi tecla lider > space
 let mapleader = " "
 
 " desabilito el uso de las feclas del teclado
@@ -17,17 +17,18 @@ nnoremap <C-j> 10 <C-y>
 " coloca un punto y coma al final de línea situada usando (space+,)
 nnoremap <Leader>, $a;<Esc>
 
-" ejecutar archivos .js & .ts con nodejs
-nnoremap <Leader>dn :!node %<CR>
-" ejecutar archivos .py
-nnoremap <Leader>dp :!python %<CR>
-" ejecutar archivos .java
-nnoremap <Leader>dj :!javac %<CR>
-nnoremap <Leader>djj :!java %<CR>
+" ejecuta archivos .js & .ts con nodejs
+nnoremap <Leader>rn :!node %<CR>
+" compila y ejecuta archivos .py
+nnoremap <Leader>rp :!python %<CR>
+" compila y ejecuta archivos .java
+nnoremap <Leader>rj :!java %<CR>
 
 " con space+t abre la terminal PowerShell
-nnoremap <C-t>t :call OpenTerminal()<CR>
-nnoremap <Leader>t :terminal<CR>
+nnoremap <Leader>t :call OpenTerminal()<CR>
+nnoremap <C-t>t :terminal<CR>
+" matar terminal con: Ctrl+c
+tnoremap <C-c> :q!<CR>
 
 " para guardar archivos
 nnoremap <Leader>w :w<CR>
@@ -35,17 +36,10 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
 " para salir rápidamente de nvim
 nnoremap <Leader>x :qa!<CR>
-tnoremap <C-c> :q!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
 map <Leader>p :Explore<CR>
-
-" shorter commands
-cnoreabbrev tree NERDTreeToggle
-cnoreabbrev blame Gblame
-cnoreabbrev find NERDTreeFind
-cnoreabbrev diff Gdiff
 
 " tmux navigator
 nnoremap <silent> <Leader><C-h> :TmuxNavigateLeft<cr>
@@ -60,8 +54,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " encuentra archivos usando el azúcar de línea de comandos Telescope.
-nnoremap <Leader>f <cmd>Telescope find_files<CR>
-nnoremap <Leader>fl <cmd>Telescope live_grep<CR>
+nnoremap <Leader>ff <cmd>Telescope find_files<CR>
 nnoremap <Leader>fb <cmd>Telescope buffers<CR>
 nnoremap <Leader>fh <cmd>Telescope help_tags<CR>
 nnoremap <Leader>fg <cmd>Telescope git_status<CR>
@@ -119,13 +112,7 @@ nnoremap <Leader>G :G<cr>
 nnoremap <Leader>gp :Gpush<CR>
 nnoremap <Leader>gl :Gpull<CR>
 
-" run current file
-nnoremap <Leader>d :!node %<CR>
-" abrir terminal al lado
-nnoremap <C-t> :call OpenTerminal()<CR>
-" abrir terminal - toda la pestaña
-nnoremap <Leader>t :terminal<CR>
-
+" auto cierre de símbolos
 inoremap <expr> <CR> ParensIndent()
 
 function! ParensIndent()

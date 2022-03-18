@@ -53,11 +53,11 @@ autocmd FileType scss setl iskeyword+=@-@
 au BufNewFile,BufRead *.html set filetype=htmldjango
 
 " Usar <Ctrl+space> para gatillar el autocompletado de kite
-if &filetype == "javascript" || &filetype == "java"
-  inoremap <C-space> <C-x><C-u>
-else
-  inoremap <silent><expr> <C-space> coc#refresh()
-endif
+"if &filetype == "javascript" || &filetype == "java"
+""  inoremap <C-space> <C-x><C-u>
+"else
+""  inoremap <silent><expr> <C-space> coc#refresh()
+"endif
 
 " vim fugitive
 command! -bang -nargs=? -complete=dir GFiles

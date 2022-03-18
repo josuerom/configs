@@ -27,10 +27,10 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Integration with Telescope
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 
 " IDE
 Plug 'easymotion/vim-easymotion'
